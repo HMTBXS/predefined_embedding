@@ -18,7 +18,7 @@
 
 将 HMBS_sty 文件解压到 models 文件夹下  
 
-[HMBS_sty](https://pan.baidu.com/s/1tbeTiORncLoj7NwXpqv8oA?pwd=HMBS "HMBS_sty 下载")
+百度链接: [HMBS_sty](https://pan.baidu.com/s/1tbeTiORncLoj7NwXpqv8oA?pwd=HMBS "HMBS_sty 下载")
 
   
 具体预设写真可以参考
