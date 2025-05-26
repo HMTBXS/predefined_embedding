@@ -37,8 +37,8 @@
 
 ## 使用方式
 
-代替clip encode 节点，直接输出embedding，可以参考 example/simple_workflow.json
-用时也适用于 nunchaku 加速节点  
+代替clip encode 节点，直接输出embedding，可以参考 example/simple_workflow.json  
+同时也适用于 nunchaku 加速节点  
 gguf应该也没问题，但没有测试
 
 .  
