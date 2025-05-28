@@ -49,28 +49,3 @@ class MODEL(torch.nn.Module):
         x=self.conv1d0(x.permute(0,2,1)).permute(0,2,1)
         # x=self.relu(x)
         return x
-
-if __name__=="__main__":
-    vit_cfg={}
-    vit_cfg["norm"]="ln"
-    vit_cfg["num_head"]=16
-    vit_cfg["num_trans_layers"]=[1,]
-    vit_cfg["d_model"]=512
-    vit_cfg["ch_in"]=512
-    vit_cfg["ch_out"]=256
-    vit_cfg["conv_blks"]=2
-    vit_cfg["hidden_size"]=4096
-
-    vs_modeld=MODEL(**vit_cfg).cuda().bfloat16()
-    vs_modeld.load_state_dict(torch.load("/media/offl/3a93b1d1-47b8-41d8-abb6-cc7ab571af50/home/x99p/Documents/MY_trainning/runs/flux_trainer_vae/2025-05-25-00-04-06/d.pth") )
-    # vs_model=vs_model.cuda()
-    for i in range(1):
-        tm=time.time()
-
-        dummy_input=torch.load("/home/offl/Documents/comfyui/ComfyUI/models/HMBS_sty/佳丽/冷白/0ea6454ab72ec39ae50ed03068165f08/a525.pth").bfloat16().cuda()
-        print(dummy_input)
-        res2=vs_modeld(dummy_input)
-        tm2=time.time()
-        
-        print(tm2-tm)
-    print( "res2:",res2.shape )
